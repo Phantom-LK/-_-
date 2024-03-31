@@ -1,0 +1,43 @@
+<html xmlns:th="http://thmyelead.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Management System - View Attendance</title>
+</head>
+<body class="d-flex flex-column h-100">
+<header>
+    <h1>Attendance Management System</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="home.jsp">Home</a></li>
+        <li><a href="attendance.jsp">View Attendance</a></li>
+        <!-- Add more navigation links as needed -->
+    </ul>
+</nav>
+
+<main class="flex-shrink-0">
+    <h2>Submit Attendance</h2>
+    <form action="submitAttendanceServlet" method="post">
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId" required><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2024 Attendance Management System. All rights reserved.</p>
+</footer>
+</body>
+</html>
